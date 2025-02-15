@@ -1,0 +1,43 @@
+# To Do List
+1) get request => to get the task
+2) post request => to post a new task
+3) put request => to edit the task
+4) delete request => to delete the task
+
+//
+get("api/v1/items") => to get all the task
+post("api/v2/items") => add a new task
+delete("api/v1/items/:id") => to delete a particular task
+//
+
+? now Why do we have this type of the notations like all are  similar here 
+@ this is an convention, that we should follow to while creating an rest api
+   and the other reasons could be that on the server you might be hosting multiple 
+   api's or other applications, so to provide isolation and consistency
+
+//
+to maintain the readability we can create routers for specific 
+context in different files and import them
+like for the amazon
+there could routes specific to users
+there could be routes specific to orders
+there could be routes specific to products
+routes for shirts... many more
+so all the routes of all types in one file can clutter
+the file
+so, for each context of routers we create each file, 
+where each file contains all the routers related to that context
+
+//
+so we learnt that:
+context based route storing
+all the routes related to dresses in one file
+and also the specific route handlers are also stored in the another file
+we create routes in one file, create route handler functions in another file
+import the route handler functions into the routes, then use those imported functions as callbacks
+
+//
+.gitignore file is used to ignore the files and folders that
+we do not want to track
+# .file_name -> ignores file_name
+# folder_name -> ignores folder_name
